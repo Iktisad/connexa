@@ -42,3 +42,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Assume contacts are already rendered as shown in previous examples
+
+    const searchInput = document.getElementById('searchContacts');
+
+    searchInput.addEventListener('input', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const allContacts = document.querySelectorAll('#contactsList > div');
+
+        allContacts.forEach(contact => {
+            const contactName = contact.querySelector('.font-bold').textContent.toLowerCase();
+
+            if (contactName.includes(searchTerm)) {
+                contact.style.display = '';
+            } else {
+                contact.style.display = 'none';
+            }
+        });
+    });
+});
