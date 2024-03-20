@@ -26,9 +26,11 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM7.07 18.28C7.5 17.38 10.12 16.5 12 16.5C13.88 16.5 16.51 17.38 16.93 18.28C15.57 19.36 13.86 20 12 20C10.14 20 8.43 19.36 7.07 18.28ZM12 14.5C13.46 14.5 16.93 15.09 18.36 16.83C19.38 15.49 20 13.82 20 12C20 7.59 16.41 4 12 4C7.59 4 4 7.59 4 12C4 13.82 4.62 15.49 5.64 16.83C7.07 15.09 10.54 14.5 12 14.5ZM12 6C10.06 6 8.5 7.56 8.5 9.5C8.5 11.44 10.06 13 12 13C13.94 13 15.5 11.44 15.5 9.5C15.5 7.56 13.94 6 12 6ZM10.5 9.5C10.5 10.33 11.17 11 12 11C12.83 11 13.5 10.33 13.5 9.5C13.5 8.67 12.83 8 12 8C11.17 8 10.5 8.67 10.5 9.5Z" fill="#000000"/>
                 </svg>
            
-            Add Contact
+            Edit Contact
         </h2>
-        <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <form id="editContactForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="hidden" id="contactId"> <!-- Hidden field for contact ID -->
             <div class="mb-4">
                 <label for="firstName" class="block text-sm font-medium text-gray-700">First Name:</label>
                 <input type="text" id="firstName" name="firstName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
@@ -68,7 +70,7 @@
                 <input type="url" id="address_civic_number" name="address_civic_number" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
             <div class="mb-4">
-                <label for="address_unit_number" class="block text-sm font-medium text-gray-700">Address - Street:</label>
+                <label for="address_street" class="block text-sm font-medium text-gray-700">Address - Street:</label>
                 <input type="url" id="address_street" name="address_street" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
             <div class="mb-4">
@@ -81,12 +83,13 @@
             </div>
             <div class="mb-4">
                 <label for="address_postal_code" class="block text-sm font-medium text-gray-700">Address - Postal Code:</label>
-                <input type="url" id="address_code" name="address_code" placeholder="ANA NAN"  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <input type="url" id="address_postal_code" name="address_postal_code" placeholder="ANA NAN"  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
             
             <!-- Add more form fields as needed -->
+
             <div class="mb-4 flex">
-                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">Save</button>
+                <button id="submit" type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">Save</button>
                 <a href="/frontend/src/contact/index.html" class="inline-block ml-2 px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M19 12H5"></path>
@@ -98,6 +101,6 @@
         </form>
     </div>
 </body>
-<script src="../assets/js/contact.js"></script>
+<script src="../assets/js/edit-contact.js"></script>
 
 </html>
