@@ -52,7 +52,7 @@ contact-management-system/
 2. Navigate to the project directory
    
    ```bash
-    cd CONTACT_MANAGEMENT_APP
+    cd connexa
     cd frontend
    ```
 3. install the following dependencies
