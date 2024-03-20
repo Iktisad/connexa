@@ -47,7 +47,7 @@ contact-management-system/
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://your-repository-link-here
+   git clone https://github.com/Iktisad/connexa.git
    ```
 2. Navigate to the project directory
    
