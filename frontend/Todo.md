@@ -7,7 +7,7 @@
 - [ ] Data Validity for Edit Contact
 
 ### API Connectivity
-- [ ] Signup API
+- [x] Signup API
 - [ ] Login API
 - [ ] Add Contact API
 - [ ] Edit Contact API
