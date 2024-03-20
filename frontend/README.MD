@@ -1,4 +1,4 @@
-# Contact Management System
+# CONNEXA - A cloud based Contact Management System
 
 This Contact Management System is a web application designed to store, view, edit, and delete contact information securely and efficiently. The project utilizes HTML, CSS (with Tailwind CSS for styling), and JavaScript to provide a user-friendly interface and a seamless experience.
 
