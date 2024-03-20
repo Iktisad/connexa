@@ -32,11 +32,13 @@
             <div class="mb-4">
                 <label for="firstName" class="block text-sm font-medium text-gray-700">First Name:</label>
                 <input type="text" id="firstName" name="firstName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                <p id="firstNameError" class="text-red-500 text-xs italic"></p>
             </div>
             
             <div class="mb-4">
                 <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name:</label>
                 <input type="text" id="lastName" name="lastName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                <p id="lastNameError" class="text-red-500 text-xs italic"></p>
             </div>
             
             <div class="mb-4">
@@ -47,57 +49,64 @@
             <div class="mb-4">
                 <label for="phone" class="block text-sm font-medium text-gray-700">Phone:</label>
                 <input type="tel" id="phone" name="phone" pattern="\+1 \(\d{3}\) \d{3}-\d{4}" placeholder="+1 (123) 456-7890" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                <p id="phoneError" class="text-red-500 text-xs italic"></p>
             </div>
             
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
                 <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                <p id="emailError" class="text-red-500 text-xs italic"></p>
             </div>
             
             <div class="mb-4">
                 <label for="website" class="block text-sm font-medium text-gray-700">Website:</label>
                 <input type="url" id="website" name="website" placeholder="https://example.com" pattern="https?://.+" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <p id="websiteError" class="text-red-500 text-xs italic"></p>
             </div>
 
             <div class="mb-4">
-                <label for="address_unit_number" class="block text-sm font-medium text-gray-700">Address - Unit Number:</label>
-                <input type="url" id="address_unit_number" name="address_unit_number" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressUnitNumber" class="block text-sm font-medium text-gray-700">Address - Unit Number:</label>
+                <input type="url" id="addressUnitNumber" name="addressUnitNumber" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <p id="firstNameError" class="text-red-500 text-xs italic"></p>
             </div>
             <div class="mb-4">
-                <label for="address_civic_number" class="block text-sm font-medium text-gray-700">Address - Civic Number:</label>
-                <input type="url" id="address_civic_number" name="address_civic_number" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressCivicNumber" class="block text-sm font-medium text-gray-700">Address - Civic Number:</label>
+                <input type="url" id="addressCivicNumber" name="addressCivicNumber" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
             <div class="mb-4">
-                <label for="address_unit_number" class="block text-sm font-medium text-gray-700">Address - Street:</label>
-                <input type="url" id="address_street" name="address_street" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressStreet" class="block text-sm font-medium text-gray-700">Address - Street:</label>
+                <input type="url" id="addressStreet" name="addressStreet" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
             <div class="mb-4">
-                <label for="address_city" class="block text-sm font-medium text-gray-700">Address - City:</label>
-                <input type="url" id="address_city" name="address_city" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressCity" class="block text-sm font-medium text-gray-700">Address - City:</label>
+                <input type="url" id="addressCity" name="addressCity" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                
             </div>
             <div class="mb-4">
-                <label for="address_province" class="block text-sm font-medium text-gray-700">Address - Province:</label>
-                <input type="url" id="address_province" name="address_province" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressProvince" class="block text-sm font-medium text-gray-700">Address - Province:</label>
+                <input type="url" id="addressProvince" name="addressProvince" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <p id="addressProvinceError" class="text-red-500 text-xs italic"></p>
             </div>
             <div class="mb-4">
-                <label for="address_postal_code" class="block text-sm font-medium text-gray-700">Address - Postal Code:</label>
-                <input type="url" id="address_code" name="address_code" placeholder="ANA NAN"  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressPostalCode" class="block text-sm font-medium text-gray-700">Address - Postal Code:</label>
+                <input type="url" id="addressPostalCode" name="addressPostalCode" placeholder="ANA NAN"  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <p id="addressPostalCodeError" class="text-red-500 text-xs italic"></p>
             </div>
             
             <!-- Add more form fields as needed -->
-            <div class="mb-4 flex">
-                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">Save</button>
-                <a href="/frontend/src/contact/index.html" class="inline-block ml-2 px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M19 12H5"></path>
-                        <path d="M12 19l-7-7 7-7"></path>
-                      </svg>
+            <!-- Form Submission and Navigation Buttons -->
+            <div class="mt-4 flex items-center">
+                <button type="submit" class="mr-2 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">Save</button>
+                <a href="/frontend/src/contact/index.html" class="px-4 py-2 bg-gray-300 text-gray-800 font-semibold rounded hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+                    </svg>
+                    Back
                 </a>
-
             </div>
         </form>
     </div>
 </body>
-<script src="../assets/js/contact.js"></script>
+<script src="../assets/js/add-contact.js" type="module"></script>
 
 </html>
