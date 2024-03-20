@@ -34,25 +34,28 @@
 
 
 <body class="bg-gray-100">
-    <div class="flex flex-wrap">
+    <div class="min-h-screen flex flex-col lg:flex-row">
         <!-- Image Container (Full Screen on larger devices, hidden on mobile) -->
-        <!-- <div class="w-full lg:w-1/2 h-screen hidden lg:block" style="background-image: url('../assets/img/coffeeNfriends.jpeg'); background-size: cover; background-position: center;"></div> -->
-        <div class="relative w-full lg:w-1/2 h-screen">
-            <img src="../assets/img/coffeeNfriends.jpeg" alt="Marketing Image" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <div class="text-center">
-                    <h1 class="text-white text-4xl font-bold mb-4">Welcome to <span class="font-semibold text-green-400">Connexa</span></h1>
-
-                    <p class="text-white font-semibold text-xl mb-4">"Always Keep Your Loved Ones Close."</p>
-                    <p class="text-white font-semibold text-xl"><span class="typing">We safe keep your contacts, for you.</span></p>
+       
+        <!-- Image Container -->
+        <div class="lg:flex lg:w-1/2">
+            <div class="hidden lg:block relative w-full h-screen">
+                <img src="../assets/img/coffeeNfriends.jpeg" alt="Marketing Image" class="absolute inset-0 w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <div class="text-center">
+                        <h1 class="text-white text-4xl font-bold mb-4">Welcome to <span class="font-semibold text-green-400">Connexa</span></h1>
+                        <p class="text-white font-semibold text-xl mb-4">"Always Keep Your Loved Ones Close."</p>
+                        <p class="text-white font-semibold text-xl"><span class="typing">We safe keep your contacts, for you.</span></p>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Form Container (Takes full width on mobile, half width on larger screens) -->
-        <div class="w-full lg:w-1/2 flex items-center justify-center min-h-screen">
-            <div class="max-w-md w-full mx-4">
-                <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                    <h2 class="text-gray-800 text-xl font-bold mb-6">Sign Up</h2>
+        <!-- Form Container -->
+        <div class="flex-1 flex items-center justify-center px-4">
+            <div class="max-w-md w-full mx-auto">
+                <div class="bg-white shadow-md rounded-lg px-8 py-6 mb-4">
+                    <h2 class="text-gray-800 text-xl font-bold mb-6 text-center">Sign Up</h2>
                     <form action="#" method="POST">
                         <!-- Name Field -->
                         <div class="mb-4">
