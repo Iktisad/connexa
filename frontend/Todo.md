@@ -4,7 +4,8 @@
 - [x] Data Validity for Signup
 - [x] Data Validity for Login
 - [x] Data Validity for Add Contact
-- [ ] Data Validity for Edit Contact
+- [x] In Add/Edit Contact add number type validity for Address (unit number, civic number)
+- [x] Data Validity for Edit Contact
 
 ### API Connectivity
 - [ ] Signup API

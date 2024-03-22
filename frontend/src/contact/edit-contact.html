@@ -40,6 +40,7 @@
             <div class="mb-4">
                 <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name:</label>
                 <input type="text" id="lastName" name="lastName" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                <p id="lastNameError" class="text-red-500 text-xs italic"></p>
             </div>
             
             <div class="mb-4">
@@ -49,42 +50,275 @@
             
             <div class="mb-4">
                 <label for="phone" class="block text-sm font-medium text-gray-700">Phone:</label>
-                <input type="tel" id="phone" name="phone" pattern="\+1 \(\d{3}\) \d{3}-\d{4}" placeholder="+1 (123) 456-7890" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                <div class="flex">
+                    
+                    <select id="countryCode" name="countryCode" class="mt-1 w-1/3 text-sm block rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                        <!-- Populate this select with options for country codes -->
+                        <option data-countryCode="CA" value="1" selected>CAN (+1)</option>
+                        <option data-countryCode="DZ" value="213">DZA (+213)</option>
+                        <option data-countryCode="AD" value="376">AND (+376)</option>
+                        <option data-countryCode="AO" value="244">AGO (+244)</option>
+                        <option data-countryCode="AI" value="1264">AIA (+1264)</option>
+                        <option data-countryCode="AG" value="1268">ATG (+1268)</option>
+                        <option data-countryCode="AR" value="54">ARG (+54)</option>
+                        <option data-countryCode="AM" value="374">ARM (+374)</option>
+                        <option data-countryCode="AW" value="297">ABW (+297)</option>
+                        <option data-countryCode="AU" value="61">AUS (+61)</option>
+                        <option data-countryCode="AT" value="43">AUT (+43)</option>
+                        <option data-countryCode="AZ" value="994">AZE (+994)</option>
+                        <option data-countryCode="BS" value="1242">BHS (+1242)</option>
+                        <option data-countryCode="BH" value="973">BHR (+973)</option>
+                        <option data-countryCode="BD" value="880">BGD (+880)</option>
+                        <option data-countryCode="BB" value="1246">BRB (+1246)</option>
+                        <option data-countryCode="BY" value="375">BLR (+375)</option>
+                        <option data-countryCode="BE" value="32">BEL (+32)</option>
+                        <option data-countryCode="BZ" value="501">BLZ (+501)</option>
+                        <option data-countryCode="BJ" value="229">BEN (+229)</option>
+                        <option data-countryCode="BM" value="1441">BMU (+1441)</option>
+                        <option data-countryCode="BT" value="975">BTN (+975)</option>
+                        <option data-countryCode="BO" value="591">BOL (+591)</option>
+                        <option data-countryCode="BA" value="387">BIH (+387)</option>
+                        <option data-countryCode="BW" value="267">BWA (+267)</option>
+                        <option data-countryCode="BR" value="55">BRA (+55)</option>
+                        <option data-countryCode="BN" value="673">BRN (+673)</option>
+                        <option data-countryCode="BG" value="359">BGR (+359)</option>
+                        <option data-countryCode="BF" value="226">BFA (+226)</option>
+                        <option data-countryCode="BI" value="257">BDI (+257)</option>
+                        <option data-countryCode="KH" value="855">KHM (+855)</option>
+                        <option data-countryCode="CM" value="237">CMR (+237)</option>
+                       
+                        <option data-countryCode="CV" value="238">CPV (+238)</option>
+                        <option data-countryCode="KY" value="1345">CYM (+1345)</option>
+                        <option data-countryCode="CF" value="236">CAF (+236)</option>
+                        <option data-countryCode="CL" value="56">CHL (+56)</option>
+                        <option data-countryCode="CN" value="86">CHN (+86)</option>
+                        <option data-countryCode="CO" value="57">COL (+57)</option>
+                        <option data-countryCode="KM" value="269">COM (+269)</option>
+                        <option data-countryCode="CG" value="242">COG (+242)</option>
+                        <option data-countryCode="CK" value="682">COK (+682)</option>
+                        <option data-countryCode="CR" value="506">CRI (+506)</option>
+                        <option data-countryCode="HR" value="385">HRV (+385)</option>
+                        <option data-countryCode="CU" value="53">CUB (+53)</option>
+                        <option data-countryCode="CY" value="90392">CYP (+90392)</option>
+                        <option data-countryCode="CY" value="357">CYP (+357)</option>
+                        <option data-countryCode="CZ" value="42">CZE (+42)</option>
+                        <option data-countryCode="DK" value="45">DNK (+45)</option>
+                        <option data-countryCode="DJ" value="253">DJI (+253)</option>
+                        <option data-countryCode="DM" value="1809">DMA (+1809)</option>
+                        <option data-countryCode="DO" value="1809">DOM (+1809)</option>
+                        <option data-countryCode="EC" value="593">ECU (+593)</option>
+                        <option data-countryCode="EG" value="20">EGY (+20)</option>
+                        <option data-countryCode="SV" value="503">SLV (+503)</option>
+                        <option data-countryCode="GQ" value="240">GNQ (+240)</option>
+                        <option data-countryCode="ER" value="291">ERI (+291)</option>
+                        <option data-countryCode="EE" value="372">EST (+372)</option>
+                        <option data-countryCode="ET" value="251">ETH (+251)</option>
+                        <option data-countryCode="FK" value="500">FLK (+500)</option>
+                        <option data-countryCode="FO" value="298">FRO (+298)</option>
+                        <option data-countryCode="FJ" value="679">FJI (+679)</option>
+                        <option data-countryCode="FI" value="358">FIN (+358)</option>
+                        <option data-countryCode="FR" value="33">FRA (+33)</option>
+                        <option data-countryCode="GF" value="594">GUF (+594)</option>
+                        <option data-countryCode="PF" value="689">PYF (+689)</option>
+                        <option data-countryCode="GA" value="241">GAB (+241)</option>
+                        <option data-countryCode="GM" value="220">GMB (+220)</option>
+                        <option data-countryCode="GE" value="7880">GEO (+7880)</option>
+                        <option data-countryCode="DE" value="49">DEU (+49)</option>
+                        <option data-countryCode="GH" value="233">GHA (+233)</option>
+                        <option data-countryCode="GI" value="350">GIB (+350)</option>
+                        <option data-countryCode="GR" value="30">GRC (+30)</option>
+                        <option data-countryCode="GL" value="299">GRL (+299)</option>
+                        <option data-countryCode="GD" value="1473">GRD (+1473)</option>
+                        <option data-countryCode="GP" value="590">GLP (+590)</option>
+                        <option data-countryCode="GU" value="671">GUM (+671)</option>
+                        <option data-countryCode="GT" value="502">GTM (+502)</option>
+                        <option data-countryCode="GN" value="224">GIN (+224)</option>
+                        <option data-countryCode="GW" value="245">GNB (+245)</option>
+                        <option data-countryCode="GY" value="592">GUY (+592)</option>
+                        <option data-countryCode="HT" value="509">HTI (+509)</option>
+                        <option data-countryCode="HN" value="504">HND (+504)</option>
+                        <option data-countryCode="HK" value="852">HKG (+852)</option>
+                        <option data-countryCode="HU" value="36">HUN (+36)</option>
+                        <option data-countryCode="IS" value="354">ISL (+354)</option>
+                        <option data-countryCode="IN" value="91">IND (+91)</option>
+                        <option data-countryCode="ID" value="62">IDN (+62)</option>
+                        <option data-countryCode="IR" value="98">IRN (+98)</option>
+                        <option data-countryCode="IQ" value="964">IRQ (+964)</option>
+                        <option data-countryCode="IE" value="353">IRL (+353)</option>
+                        <option data-countryCode="IL" value="972">ISR (+972)</option>
+                        <option data-countryCode="IT" value="39">ITA (+39)</option>
+                        <option data-countryCode="JM" value="1876">JAM (+1876)</option>
+                        <option data-countryCode="JP" value="81">JPN (+81)</option>
+                        <option data-countryCode="JO" value="962">JOR (+962)</option>
+                        <option data-countryCode="KZ" value="7">KAZ (+7)</option>
+                        <option data-countryCode="KE" value="254">KEN (+254)</option>
+                        <option data-countryCode="KI" value="686">KIR (+686)</option>
+                        <option data-countryCode="KP" value="850">PRK (+850)</option>
+                        <option data-countryCode="KR" value="82">KOR (+82)</option>
+
+                        <option data-countryCode="KW" value="965">KWT (+965)</option>
+                        <option data-countryCode="KG" value="996">KGZ (+996)</option>
+                        <option data-countryCode="LA" value="856">LAO (+856)</option>
+                        <option data-countryCode="LV" value="371">LVA (+371)</option>
+                        <option data-countryCode="LB" value="961">LBN (+961)</option>
+                        <option data-countryCode="LS" value="266">LSO (+266)</option>
+                        <option data-countryCode="LR" value="231">LBR (+231)</option>
+                        <option data-countryCode="LY" value="218">LBY (+218)</option>
+                        <option data-countryCode="LI" value="417">LIE (+417)</option>
+                        <option data-countryCode="LT" value="370">LTU (+370)</option>
+                        <option data-countryCode="LU" value="352">LUX (+352)</option>
+                        <option data-countryCode="MO" value="853">MAC (+853)</option>
+                        <option data-countryCode="MK" value="389">MKD (+389)</option>
+                        <option data-countryCode="MG" value="261">MDG (+261)</option>
+                        <option data-countryCode="MW" value="265">MWI (+265)</option>
+                        <option data-countryCode="MY" value="60">MYS (+60)</option>
+                        <option data-countryCode="MV" value="960">MDV (+960)</option>
+                        <option data-countryCode="ML" value="223">MLI (+223)</option>
+                        <option data-countryCode="MT" value="356">MLT (+356)</option>
+                        <option data-countryCode="MH" value="692">MHL (+692)</option>
+                        <option data-countryCode="MQ" value="596">MTQ (+596)</option>
+                        <option data-countryCode="MR" value="222">MRT (+222)</option>
+                        <option data-countryCode="YT" value="269">MYT (+269)</option>
+                        <option data-countryCode="MX" value="52">MEX (+52)</option>
+                        <option data-countryCode="FM" value="691">FSM (+691)</option>
+                        <option data-countryCode="MD" value="373">MDA (+373)</option>
+                        <option data-countryCode="MC" value="377">MCO (+377)</option>
+                        <option data-countryCode="MN" value="976">MNG (+976)</option>
+                        <option data-countryCode="MS" value="1664">MSR (+1664)</option>
+                        <option data-countryCode="MA" value="212">MAR (+212)</option>
+                        <option data-countryCode="MZ" value="258">MOZ (+258)</option>
+                        <option data-countryCode="MN" value="95">MMR (+95)</option>
+                        <option data-countryCode="NA" value="264">NAM (+264)</option>
+                        <option data-countryCode="NR" value="674">NRU (+674)</option>
+                        <option data-countryCode="NP" value="977">NPL (+977)</option>
+                        <option data-countryCode="NL" value="31">NLD (+31)</option>
+                        <option data-countryCode="NC" value="687">NCL (+687)</option>
+                        <option data-countryCode="NZ" value="64">NZL (+64)</option>
+                        <option data-countryCode="NI" value="505">NIC (+505)</option>
+                        <option data-countryCode="NE" value="227">NER (+227)</option>
+                        <option data-countryCode="NG" value="234">NGA (+234)</option>
+                        <option data-countryCode="NU" value="683">NIU (+683)</option>
+                        <option data-countryCode="NF" value="672">NFK (+672)</option>
+                        <option data-countryCode="NP" value="670">MNP (+670)</option>
+                        <option data-countryCode="NO" value="47">NOR (+47)</option>
+                        <option data-countryCode="OM" value="968">OMN (+968)</option>
+                        <option data-countryCode="PW" value="680">PLW (+680)</option>
+                        <option data-countryCode="PA" value="507">PAN (+507)</option>
+                        <option data-countryCode="PG" value="675">PNG (+675)</option>
+
+                        <option data-countryCode="PY" value="595">PRY (+595)</option>
+                        <option data-countryCode="PE" value="51">PER (+51)</option>
+                        <option data-countryCode="PH" value="63">PHL (+63)</option>
+                        <option data-countryCode="PL" value="48">POL (+48)</option>
+                        <option data-countryCode="PT" value="351">PRT (+351)</option>
+                        <option data-countryCode="PR" value="1787">PRI (+1787)</option>
+                        <option data-countryCode="QA" value="974">QAT (+974)</option>
+                        <option data-countryCode="RE" value="262">REU (+262)</option>
+                        <option data-countryCode="RO" value="40">ROU (+40)</option>
+                        <option data-countryCode="RU" value="7">RUS (+7)</option>
+                        <option data-countryCode="RW" value="250">RWA (+250)</option>
+                        <option data-countryCode="SM" value="378">SMR (+378)</option>
+                        <option data-countryCode="ST" value="239">STP (+239)</option>
+                        <option data-countryCode="SA" value="966">SAU (+966)</option>
+                        <option data-countryCode="SN" value="221">SEN (+221)</option>
+                        <option data-countryCode="CS" value="381">SRB (+381)</option>
+                        <option data-countryCode="SC" value="248">SYC (+248)</option>
+                        <option data-countryCode="SL" value="232">SLE (+232)</option>
+                        <option data-countryCode="SG" value="65">SGP (+65)</option>
+                        <option data-countryCode="SK" value="421">SVK (+421)</option>
+                        <option data-countryCode="SI" value="386">SVN (+386)</option>
+                        <option data-countryCode="SB" value="677">SLB (+677)</option>
+                        <option data-countryCode="SO" value="252">SOM (+252)</option>
+                        <option data-countryCode="ZA" value="27">ZAF (+27)</option>
+                        <option data-countryCode="ES" value="34">ESP (+34)</option>
+                        <option data-countryCode="LK" value="94">LKA (+94)</option>
+                        <option data-countryCode="SH" value="290">SHN (+290)</option>
+                        <option data-countryCode="KN" value="1869">KNA (+1869)</option>
+                        <option data-countryCode="SC" value="1758">LCA (+1758)</option>
+                        <option data-countryCode="SD" value="249">SDN (+249)</option>
+                        <option data-countryCode="SR" value="597">SUR (+597)</option>
+                        <option data-countryCode="SZ" value="268">SWZ (+268)</option>
+                        <option data-countryCode="SE" value="46">SWE (+46)</option>
+                        <option data-countryCode="CH" value="41">CHE (+41)</option>
+                        <option data-countryCode="SI" value="963">SYR (+963)</option>
+                        <option data-countryCode="TW" value="886">TWN (+886)</option>
+                        <option data-countryCode="TJ" value="7">TJK (+7)</option>
+                        <option data-countryCode="TH" value="66">THA (+66)</option>
+                        <option data-countryCode="TG" value="228">TGO (+228)</option>
+                        <option data-countryCode="TO" value="676">TON (+676)</option>
+                        <option data-countryCode="TT" value="1868">TTO (+1868)</option>
+                        <option data-countryCode="TN" value="216">TUN (+216)</option>
+                        <option data-countryCode="TR" value="90">TUR (+90)</option>
+                        <option data-countryCode="TM" value="7">TKM (+7)</option>
+                        <option data-countryCode="TM" value="993">TKM (+993)</option>
+                        <option data-countryCode="TC" value="1649">TCA (+1649)</option>
+                        <option data-countryCode="TV" value="688">TUV (+688)</option>
+                        <option data-countryCode="UG" value="256">UGA (+256)</option>
+                        <option data-countryCode="GB" value="44">GBR (+44)</option>
+
+                        
+                        <option data-countryCode="UA" value="380">UKR (+380)</option>
+                        <option data-countryCode="AE" value="971">ARE (+971)</option>
+                        <option data-countryCode="UY" value="598">URY (+598)</option>
+                        <option data-countryCode="US" value="1">USA (+1)</option>
+                        <option data-countryCode="UZ" value="7">UZB (+7)</option>
+                        <option data-countryCode="VU" value="678">VUT (+678)</option>
+                        <option data-countryCode="VA" value="379">VAT (+379)</option>
+                        <option data-countryCode="VE" value="58">VEN (+58)</option>
+                        <option data-countryCode="VN" value="84">VNM (+84)</option>
+                        <option data-countryCode="VG" value="84">VGB (+1284)</option>
+                        <option data-countryCode="VI" value="84">VIR (+1340)</option>
+                        <option data-countryCode="WF" value="681">WLF (+681)</option>
+                        <option data-countryCode="YE" value="969">YEM (+969)</option>
+                        <option data-countryCode="YE" value="967">YEM (+967)</option>
+                        <option data-countryCode="ZM" value="260">ZMB (+260)</option>
+                        <option data-countryCode="ZW" value="263">ZWE (+263)</option>
+
+                    </select>
+                
+                    <input type="tel" id="phone" name="phone" placeholder="(xxx) xxx-xxxx" class="mt-1 block w-2/3 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    
+                </div>
+                <p id="phoneError" class="text-red-500 text-xs italic"></p>
             </div>
             
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
                 <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                <p id="emailError" class="text-red-500 text-xs italic"></p>
             </div>
             
             <div class="mb-4">
                 <label for="website" class="block text-sm font-medium text-gray-700">Website:</label>
                 <input type="url" id="website" name="website" placeholder="https://example.com" pattern="https?://.+" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <p id="websiteError" class="text-red-500 text-xs italic"></p>
             </div>
 
             <div class="mb-4">
-                <label for="address_unit_number" class="block text-sm font-medium text-gray-700">Address - Unit Number:</label>
-                <input type="url" id="address_unit_number" name="address_unit_number" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressUnitNumber" class="block text-sm font-medium text-gray-700">Address - Unit Number:</label>
+                <input type="text" id="addressUnitNumber" name="addressUnitNumber" placeholder="110"  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <p id="addressUnitNumberError" class="text-red-500 text-xs italic"></p>
             </div>
             <div class="mb-4">
-                <label for="address_civic_number" class="block text-sm font-medium text-gray-700">Address - Civic Number:</label>
-                <input type="url" id="address_civic_number" name="address_civic_number" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressCivicNumber" class="block text-sm font-medium text-gray-700">Address - Civic Number:</label>
+                <input type="text" id="addressCivicNumber" name="addressCivicNumber" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <p id="addressCivicNumberError" class="text-red-500 text-xs italic"></p>
             </div>
             <div class="mb-4">
-                <label for="address_street" class="block text-sm font-medium text-gray-700">Address - Street:</label>
-                <input type="url" id="address_street" name="address_street" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressStreet" class="block text-sm font-medium text-gray-700">Address - Street:</label>
+                <input type="text" id="addressStreet" name="addressStreet" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
             <div class="mb-4">
-                <label for="address_city" class="block text-sm font-medium text-gray-700">Address - City:</label>
-                <input type="url" id="address_city" name="address_city" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressCity" class="block text-sm font-medium text-gray-700">Address - City:</label>
+                <input type="text" id="addressCity" name="addressCity" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
             <div class="mb-4">
-                <label for="address_province" class="block text-sm font-medium text-gray-700">Address - Province:</label>
-                <input type="url" id="address_province" name="address_province" placeholder=""  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressProvince" class="block text-sm font-medium text-gray-700">Address - Province:</label>
+                <input maxlength="2" type="text" id="addressProvince" name="addressProvince" placeholder="QC"  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
             <div class="mb-4">
-                <label for="address_postal_code" class="block text-sm font-medium text-gray-700">Address - Postal Code:</label>
-                <input type="url" id="address_postal_code" name="address_postal_code" placeholder="ANA NAN"  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <label for="addressPostalCode" class="block text-sm font-medium text-gray-700">Address - Postal Code:</label>
+                <input type="text" id="addressPostalCode" name="addressPostalCode" placeholder="ANA NAN"  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
             </div>
             
             <!-- Add more form fields as needed -->
@@ -103,6 +337,6 @@
         </form>
     </div>
 </body>
-<script src="../assets/js/edit-contact.js"></script>
+<script src="../assets/js/edit-contact.js" type="module"></script>
 
 </html>
