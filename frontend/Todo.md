@@ -3,7 +3,7 @@
 ### Data Validity
 - [x] Data Validity for Signup
 - [x] Data Validity for Login
-- [ ] Data Validity for Add Contact
+- [x] Data Validity for Add Contact
 - [ ] Data Validity for Edit Contact
 
 ### API Connectivity
