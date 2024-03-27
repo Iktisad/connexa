@@ -1,0 +1,41 @@
+### Create Contact
+POST http://localhost:3000/api/users/signup
+Content-Type: application/json
+
+{
+    "name": "Jane Smith",
+    "email":"jane.smith@example.com",
+    "password":"easypassword"
+}
+
+### Get All users
+GET http://localhost:3000/api/users/
+
+### Get One Contact
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "email":"johndoe@example.com",
+    "password":"easypassword"
+}
+
+
+### Update Contact
+PUT http://localhost:3000/api/users/contact001
+
+### Delete Contact
+DELETE http://localhost:3000/api/users/6603222edf989ab25dd964af
+# Content-Type: application/json
+
+# {
+#     "patient": "6128afa0d56f2bf181f8780f",
+#     "items": [
+#         {"date": "2021-09-01", "service": "Scaling", "cost": 5000 },
+#         {"date": "2021-09-01", "service": "Root Canal", "cost": 5000 }
+#     ],
+#     "payment": [
+#         {"date": "2021-09-01", "paid": 1000, "paymentMethod": "Bkash" },
+#         {"date": "2021-09-01", "paid": 5000, "paymentMethod": "Bkassh" }
+#     ]
+# }

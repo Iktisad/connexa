@@ -1,0 +1,66 @@
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjAzMjFhOGEzNjVkYWYwZWIyNzU3OGYiLCJ1c2VybmFtZSI6IkphbmUgU21pdGgiLCJlbWFpbCI6ImphbmUuc21pdGhAZXhhbXBsZS5jb20iLCJpYXQiOjE3MTE0ODg4OTAsImV4cCI6MTcxMTQ5MjQ5MH0.bl7mybgLc9BT64sBSPtEs3sBoWzyEommkqxhO7fdsJ0
+
+@api = http://localhost:3000/api
+
+### Get All Contacts
+GET {{api}}/contacts/all
+Authorization: Authorization: Bearer {{token}}
+
+### Get One Contact
+GET {{api}}/contacts/660113346c84c83ab8058d9f
+Authorization: Authorization: Bearer {{token}}
+
+### Create Contact
+POST {{api}}/contacts
+Authorization: Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "user":"660321a8a365daf0eb27578f",
+    "firstName": "Iktisad",
+    "lastName": "Rashid",
+    "company": "Rainier Technologies",
+    "phone": "+880 (162) 763-4056",
+    "email": "john.doe@example.com", 
+    "website": "https://example.com", 
+    "address": { 
+        "unitNumber": "110", 
+        "civicNumber": "1463",
+        "street": "Bishop Street",
+        "city": "Montreal",
+        "province": "QC",
+        "postalCode": "H2G 2E4"
+    }
+
+}
+
+
+### Update Contact -- contact id in params --
+PUT {{api}}/contacts/660113346c84c83ab8058d9f
+Authorization: Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "user":"65fffe4ddfdf3a486734cd39",
+    "firstName": "Iktisad",
+    "lastName": "Rashid",
+    "company": "Rainier Technologies",
+    "phone": "+1 (438) 773-5500",
+    "email": "john.doe@example.com", 
+    "website": "https://example.com", 
+    "address": { 
+        "unitNumber": "110", 
+        "civicNumber": "1463",
+        "street": "Bishop Street",
+        "city": "Montreal",
+        "province": "QC",
+        "postalCode": "H2G 2E4"
+    }
+}
+
+
+### Delete Contact
+DELETE {{api}}/contacts/660340da86d51cf2b0c6f3f0
+Authorization: Authorization: Bearer {{token}}
+# Content-Type: application/json
+
