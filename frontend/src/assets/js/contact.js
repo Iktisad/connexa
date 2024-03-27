@@ -26,7 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 Authorization: `Bearer ${token}`,
             },
         })
-            .then((response) => response.json())
+            .then((response) => {
+                // Check if response status is 401 (Unauthorized)
+                if (response.status === 401) {
+                    // Redirect to login page or handle unauthorized access
+                    alert("Not Authorized to view");
+                    window.location.href = "../auth/login.html";
+                    return;
+                }
+
+                return response.json();
+            })
             .then((res) => {
                 contacts = res.data || []; // Update the contacts array with fetched data
                 renderContacts(contacts); // Render the contacts on the page

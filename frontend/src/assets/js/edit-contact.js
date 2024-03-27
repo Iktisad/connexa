@@ -1,5 +1,12 @@
 import validator, { deleteEmptyFields } from "./validation.js";
 document.addEventListener("DOMContentLoaded", () => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        alert("Not Authorized to View!");
+        return (window.location.href = "../auth/login.html");
+    }
+
     const editContactForm = document.getElementById("editContactForm");
 
     // Retrieving the stored contact data
@@ -126,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         const reshape = deleteEmptyFields(updatedContact);
-        const token = localStorage.getItem("token");
+
         // Send the updated contact data to the backend
         fetch(`http://localhost:3000/api/contacts/${contactToEdit._id}`, {
             method: "PUT",

@@ -2,6 +2,13 @@ import validator, { deleteEmptyFields } from "./validation.js";
 // import { jwtDecode } from "../../../node_modules/jwt-decode/build/cjs/index.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Retrieve JWT token from local storage
+    const token = localStorage.getItem("token");
+    if (!token) {
+        alert("Not Authorized to View!");
+        return (window.location.href = "../auth/login.html");
+    }
+
     const firstName = document.getElementById("firstName");
     const lastName = document.getElementById("lastName");
     const email = document.getElementById("email");
@@ -64,8 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!errors) {
             console.log("Form is valid. Proceed with form submission...");
             // Here you would handle the form submission, e.g., sending data to a server
-            // Retrieve JWT token from local storage
-            const token = localStorage.getItem("token");
+
             // Construct contact object from form data
 
             const contact = {
