@@ -1,4 +1,4 @@
-# Test Cases for Contact Management System
+# Test Cases for Connexa (Contact Management System)
 
 ## User Authentication Module
 
