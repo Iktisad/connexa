@@ -20,9 +20,9 @@
 
 ### Feature Improvement
 
--   [ ] add authorize on index page
--   [ ] add authorize on edit page
--   [ ] add authorize on add page
+-   [x] add authorize on index page
+-   [x] add authorize on edit page
+-   [x] add authorize on add page
 -   [ ] add routes
 
 ### UI Changes
