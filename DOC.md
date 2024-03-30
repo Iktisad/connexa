@@ -2,8 +2,6 @@
 
 ## Project Title : Developing a Contact Management System with Ensured Quality Attributes
 
-Certainly! Let's break down the system architecture for your contact management app and create a high-level diagram.
-
 ### System Architecture Description for a Contact Management App
 
 ### Overview
