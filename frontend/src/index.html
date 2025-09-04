@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connexa – Contact Management, Reimagined</title>
+  <link rel="stylesheet" href="./assets/tailwind/output.css" />
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased flex flex-col min-h-screen">
+  <!-- Hero Section -->
+  <header class="flex flex-col items-center justify-center py-8 px-4 bg-gradient-to-b from-emerald-50/60 to-transparent">
+    <div class="flex flex-col items-center max-w-2xl text-center">
+      <span class="mb-4 rounded-full bg-white/80 shadow-lg p-4">
+        <svg class="h-14 w-14 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M21 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+        </svg>
+      </span>
+      <h1 class="text-4xl font-extrabold mb-1 tracking-tight text-gray-900">Connexa</h1>
+      <p class="text-emerald-700 text-lg font-medium mb-1">Link Up • Stay Close</p>
+      <p class="text-gray-600 text-base max-w-xl mb-3">Connexa is the smarter way to manage your network, nurture relationships, and keep everyone you care about just one tap away. Organize, remember, and connect—beautifully.</p>
+      <a href="./auth/login.html" class="inline-block rounded-lg bg-emerald-600 px-6 py-3 text-white font-semibold shadow-lg hover:bg-emerald-700 transition">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="max-w-4xl mx-auto px-4 py-8">
+    <h2 class="text-2xl font-bold text-center mb-6 text-gray-900">Why Choose Connexa?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Feature 1 -->
+      <div class="bg-white/80 rounded-xl shadow-lg backdrop-blur p-4 flex flex-col items-center text-center">
+        <span class="mb-2 rounded-full bg-emerald-100 p-3">
+          <!-- Contacts SVG -->
+          <svg class="h-8 w-8 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M21 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"></path>
+          </svg>
+        </span>
+        <h3 class="font-semibold text-lg text-gray-900 mb-1">All Your Contacts, One Place</h3>
+        <p class="text-gray-600 text-sm">Seamlessly organize, import, and manage your contacts. Find anyone, anytime—no more lost connections.</p>
+      </div>
+      <!-- Feature 2 -->
+      <div class="bg-white/80 rounded-xl shadow-lg backdrop-blur p-4 flex flex-col items-center text-center">
+        <span class="mb-2 rounded-full bg-emerald-100 p-3">
+          <!-- Bell Icon SVG -->
+          <svg class="h-8 w-8 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          </svg>
+        </span>
+        <h3 class="font-semibold text-lg text-gray-900 mb-1">Smart Reminders</h3>
+        <p class="text-gray-600 text-sm">Never forget a birthday, anniversary, or important follow-up. Set reminders to stay in touch with those who matter most.</p>
+      </div>
+      <!-- Feature 3 -->
+      <div class="bg-white/80 rounded-xl shadow-lg backdrop-blur p-4 flex flex-col items-center text-center">
+        <span class="mb-2 rounded-full bg-emerald-100 p-3">
+          <!-- Lock/Security SVG -->
+          <svg class="h-8 w-8 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="11" width="18" height="10" rx="2"/>
+            <path d="M7 11V7a5 5 0 0110 0v4"/>
+          </svg>
+        </span>
+        <h3 class="font-semibold text-lg text-gray-900 mb-1">Private & Secure</h3>
+        <p class="text-gray-600 text-sm">Your data is always yours. Connexa uses industry-standard security and privacy best practices to keep your contacts safe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional: Add more sections (testimonials, screenshots, FAQ) here -->
+
+  <!-- Footer -->
+  <footer class="w-full bg-white border-t border-gray-200 text-center py-2 text-xs text-gray-400 select-none mt-auto">
+    © 2024 Connexa. All rights reserved.
+    <a href="#" class="hover:text-emerald-600 ml-2">Terms</a> •
+    <a href="#" class="hover:text-emerald-600 ml-2">Privacy Policy</a>
+  </footer>
+</body>
+</html>

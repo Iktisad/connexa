@@ -1,100 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sign Up</title>
-    <link rel="icon" type="image/png" href="../assets/img/notebook_icon.png"/>
-   
-    <link rel="stylesheet" href="/frontend/src/assets/css/reset.css">
-    <link rel="stylesheet" href="/frontend/src/assets/tailwind/output.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/brand-icon.svg" />
+    <link rel="stylesheet" href="/frontend/src/assets/tailwind/output.css" />
+    <style>
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #047857; }
+        }
+        .typing {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 0.15em solid #047857;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
 
-<style>
-    @keyframes typing {
-        from { width: 0; }
-        to { width: 100%; }
-    }
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+        <symbol id="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img">
+            <path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M12 12a5 5 0 100-10 5 5 0 000 10z" />
+        </symbol>
+    </svg>
 
-    @keyframes blink-caret {
-        from, to { border-color: transparent; }
-        50% { border-color: white; }
-    }
-
-    .typing {
-        display: inline-block;
-        overflow: hidden;
-        border-right: .15em solid white; /* The typewriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        animation: 
-            typing 3.5s steps(40, end),
-            blink-caret .75s step-end infinite; /* The typing effect and the cursor effect */
-    }
-</style>
-
-
-<body class="bg-gray-100">
-    <div class="min-h-screen flex flex-col lg:flex-row">
-        <!-- Image Container (Full Screen on larger devices, hidden on mobile) -->
-       
-        <!-- Image Container -->
-        <div class="lg:flex lg:w-1/2">
-            <div class="hidden lg:block relative w-full h-screen">
-                <img src="../assets/img/coffeeNfriends.jpeg" alt="Marketing Image" class="absolute inset-0 w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <div class="text-center">
-                        <h1 class="text-white text-4xl font-bold mb-4">Welcome to <span class="font-semibold text-green-400">Connexa</span></h1>
-                        <p class="text-white font-semibold text-xl mb-4">"Always Keep Your Loved Ones Close."</p>
-                        <p class="text-white font-semibold text-xl"><span class="typing">We safe keep your contacts, for you.</span></p>
+    <div class="flex flex-1 min-h-0 lg:flex-row flex-col">
+        <!-- Desktop visual side -->
+        <div class="relative hidden lg:flex lg:w-1/2">
+            <img src="../assets/img/coffeeNfriends.jpeg" alt="Warm coffee background" class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-neutral-900/40 backdrop-blur-sm flex flex-col justify-center items-center px-10 text-center">
+                <svg class="mx-auto mb-6 w-20 h-20 text-emerald-500" aria-hidden="true"><use href="#brand-icon"/></svg>
+                <h1 class="text-4xl font-extrabold text-white mb-3">Welcome to <span class="text-emerald-300">Connexa</span></h1>
+                <p class="text-amber-300 font-semibold text-xl mb-2">"Always Keep Your Loved Ones Close."</p>
+                <p class="text-emerald-100 font-semibold text-xl"><span class="typing" aria-label="We safe keep your contacts, for you.">We safe keep your contacts, for you.</span></p>
+            </div>
+        </div>
+        <!-- Mobile accent bar -->
+        <div class="lg:hidden flex items-center justify-center bg-white py-6 px-4 border-b border-gray-200">
+            <svg class="w-10 h-10 text-emerald-600" aria-hidden="true"><use href="#brand-icon"/></svg>
+        </div>
+        <!-- Signup form -->
+        <main class="flex-1 flex items-center justify-center px-6 py-12 sm:px-12">
+            <section class="max-w-md w-full bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-8">
+                <h2 class="text-3xl font-extrabold text-emerald-700 mb-8 text-center">Sign Up</h2>
+                <form action="#" method="POST" novalidate>
+                    <div class="mb-6">
+                        <label for="name" class="block text-sm font-semibold text-gray-700 mb-1">Name</label>
+                        <input type="text" id="name" name="name" required aria-describedby="nameError" placeholder="Your full name"
+                            class="w-full rounded-md border border-gray-300 px-4 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition" />
+                        <p id="nameError" class="mt-1 text-xs text-red-600 italic min-h-[1.25rem]" aria-live="polite"></p>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Form Container (Takes full width on mobile, half width on larger screens) -->
-        <!-- Form Container -->
-        <div class="flex-1 flex items-center justify-center px-4">
-            <div class="max-w-md w-full mx-auto">
-                <div class="bg-white shadow-md rounded-lg px-8 py-6 mb-4">
-                    <h2 class="text-gray-800 text-xl font-bold mb-6 text-center">Sign Up</h2>
-                    <form action="#" method="POST">
-                        <!-- Name Field -->
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
-                            <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            <p id="nameError" class="text-red-500 text-xs italic"></p>
-                        </div>
-
-                        <!-- Email Field -->
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                            <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            <p id="emailError" class="text-red-500 text-xs italic"></p>
-                        </div>
-
-                        <!-- Password Field -->
-                        <div class="mb-6">
-                            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
-                            <input type="password" id="password" name="password" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            <p id="passwordError" class="text-red-500 text-xs italic"></p>
-                        </div>
-                        <!-- Retype Password Field -->
-                        <div class="mb-6">
-                            <label for="confirm_password" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password:</label>
-                            <input type="password" id="confirmPassword" name="confirm_password" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            <p id="confirmPasswordError" class="text-red-500 text-xs italic"></p>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <div class="flex items-center justify-between">
-                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Sign Up</button>
-                            <p>Already have an account? <a href="../auth/login.html" class="font-semibold text-sky-600">Login here</a></p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" required aria-describedby="emailError" placeholder="you@example.com"
+                            class="w-full rounded-md border border-gray-300 px-4 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition" />
+                        <p id="emailError" class="mt-1 text-xs text-red-600 italic min-h-[1.25rem]" aria-live="polite"></p>
+                    </div>
+                    <div class="mb-6">
+                        <label for="password" class="block text-sm font-semibold text-gray-700 mb-1">Password</label>
+                        <input type="password" id="password" name="password" required aria-describedby="passwordError" placeholder="Enter your password"
+                            class="w-full rounded-md border border-gray-300 px-4 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition" />
+                        <p id="passwordError" class="mt-1 text-xs text-red-600 italic min-h-[1.25rem]" aria-live="polite"></p>
+                    </div>
+                    <div class="mb-8">
+                        <label for="confirmPassword" class="block text-sm font-semibold text-gray-700 mb-1">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirm_password" required aria-describedby="confirmPasswordError" placeholder="Re-enter your password"
+                            class="w-full rounded-md border border-gray-300 px-4 py-2 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition" />
+                        <p id="confirmPasswordError" class="mt-1 text-xs text-red-600 italic min-h-[1.25rem]" aria-live="polite"></p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <button type="submit" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md focus:outline-none focus:ring-4 focus:ring-emerald-400 transition">Sign Up</button>
+                        <p class="text-sm text-gray-600 text-center sm:text-left">
+                            Already have an account? <a href="../auth/login.html" class="font-semibold text-emerald-600 hover:text-emerald-700 focus:outline-none focus:underline">Login here</a>
+                        </p>
+                    </div>
+                </form>
+            </section>
+        </main>
     </div>
-</body>
-<script src="../assets/js/signup.js"></script>
 
+    <footer class="bg-white border-t border-gray-200 text-center py-4 text-xs text-gray-400 select-none">
+        &copy; 2024 Connexa. All rights reserved.
+        <div class="mt-1">
+            <a href="/frontend/src/index.html" class="hover:text-emerald-600 transition-colors">Home</a>
+            <span class="mx-1">•</span>
+            <a href="/frontend/src/legal/terms.html" class="hover:text-emerald-600 transition-colors">Terms</a>
+            <span class="mx-1">•</span>
+            <a href="/frontend/src/legal/privacy.html" class="hover:text-emerald-600 transition-colors">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="../assets/js/signup.js"></script>
+</body>
 </html>
