@@ -16,6 +16,28 @@ This is the frontend/interfcace for Connexa, which is a web application designed
 
 ![alt text](doc/image_3.png)
 
+### Dashboard
+
+![alt text](doc/image_4.png)
+
+### Add Contact
+
+![alt text](doc/image_5.png)
+
+### Edit Contact
+
+![alt text](doc/image_6.png)
+
+### Mobile Screenshots
+
+![alt text](doc/image_7.png)
+
+![alt text](doc/image_8.png)
+
+![alt text](doc/image_9.png)
+
+![alt text](doc/image_10.png)
+
 ## Features
 
 - **User Authentication**: Secure login system to access contact management features.
@@ -26,30 +48,31 @@ This is the frontend/interfcace for Connexa, which is a web application designed
 ## Project Structure
 
 ```
-contact-management-system/
-│
-├── assets/
-│ ├── css/
-│ │ ├── reset.css
-│ │ └── tailwind.css
-│ ├── img/
-│ │ └── notebook_icon.png
-│ └── js/
-│ └── contact.js
-│ └── edit-contact.js
-│
-├── src/
-│ ├── auth/
-│ │ ├── login.html
-│ │ └── signup.html
-│ │
-│ └── contact/
-│ ├── index.html
-│ ├── add-contact.html
-│ ├── edit-contact.html
-│
-│
-└── README.md
+src
+├─ assets
+│  ├─ css
+│  │  └─ reset.css
+│  ├─ img
+│  │  ├─ coffeeNdrinks.jpg
+│  │  ├─ coffeeNfriends.jpeg
+│  │  ├─ notebook_icon.png
+│  │  └─ person-account-circle-svgrepo-com.svg
+│  ├─ js
+│  │  ├─ contact.js
+│  │  ├─ login.js
+│  │  ├─ navigation.js
+│  │  ├─ signup.js
+│  │  └─ validation.js
+│  └─ tailwind
+│     ├─ input.css
+│     └─ output.css
+├─ auth
+│  ├─ login.html
+│  └─ signup.html
+├─ contact
+│  ├─ contact-form.html
+│  └─ contact.html
+└─ index.html
 ```
 
 ## Getting Started
