@@ -32,9 +32,9 @@ This is the frontend/interfcace for Connexa, which is a web application designed
 
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-
+  <img width="6912" height="3456" alt="image" src="doc/image_7.png" />
    ![alt text](doc/image_7.png)
-   
+
    ![alt text](doc/image_8.png)
    
    ![alt text](doc/image_9.png)
