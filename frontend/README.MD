@@ -30,13 +30,19 @@ This is the frontend/interfcace for Connexa, which is a web application designed
 
 ### Mobile Screenshots
 
-![alt text](doc/image_7.png)
 
-![alt text](doc/image_8.png)
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
 
-![alt text](doc/image_9.png)
+   ![alt text](doc/image_7.png)
+   
+   ![alt text](doc/image_8.png)
+   
+   ![alt text](doc/image_9.png)
+   
+   ![alt text](doc/image_10.png)
 
-![alt text](doc/image_10.png)
+</div>
+
 
 ## Features
 
