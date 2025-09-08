@@ -1,6 +1,7 @@
 # [Frontend](frontend/README.MD)
 
 # INSE6250 Quality Methodologies In Software Engineering
+## Project Requirements
 
 **Developing a Contact Management System with Ensured Quality
 Attributes**
